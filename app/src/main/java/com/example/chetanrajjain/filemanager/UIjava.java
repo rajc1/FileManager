@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
@@ -48,7 +49,29 @@ public class UIjava extends ListFragment {
         mInflater.inflate(R.menu.menu_main,menu);
     }
 
+    public boolean onOptionItemSelected(MenuItem item){
 
-}
+        int id = item.getItemId();
+
+        switch(id) {
+
+            case android.R.id.home:
+
+                presenter.homePressed();
+
+
+            case R.id.settings :
+
+                presenter.settings();
+        }
+
+        return super.onOptionsItemSelected(item);
+
+        }
+
+    }
+
+
+
 
 

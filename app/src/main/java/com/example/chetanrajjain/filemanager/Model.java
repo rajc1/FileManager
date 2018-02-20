@@ -63,9 +63,22 @@ public class Model {
 
     }
 
-    public File removePreviousDir(){
+    public File getremovePreviousDir(){
 
         return navHistory.pop();
+
+    }
+
+    public void setPreviousDir(File previousDir){
+
+        this.previousDir = previousDir;
+        navHistory.add(previousDir);
+
+    }
+
+    public File getPreviousDir(){
+
+        return previousDir;
 
     }
 
